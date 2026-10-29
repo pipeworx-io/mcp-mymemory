@@ -1,0 +1,33 @@
+{
+  "name": "@pipeworx/mcp-mymemory",
+  "version": "0.1.0",
+  "description": "MyMemory MCP — keyless machine + translation-memory translation.",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./tools.json": "./tools.json",
+    "./package.json": "./package.json"
+  },
+  "bin": {
+    "mcp-mymemory": "bin/cli.js"
+  },
+  "files": ["bin/", "lib/", "tools.json", "server.json"],
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "mymemory"],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pipeworx-io/mcp-mymemory.git"
+  },
+  "mcpName": "io.github.pipeworx-io/mymemory",
+  "pipeworx": {
+    "mode": "gateway",
+    "slug": "mymemory",
+    "gatewaySlug": "mymemory",
+    "sourceHash": "v1-41bba49fb44e7ba8ce4b7c7b5b691671832fef2e874a2a273a24d69d3b5b05df",
+    "sourceCommit": "f47d581679e1e887373df51ba623f891fbe4c464"
+  }
+}
