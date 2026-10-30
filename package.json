@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-mymemory",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "MyMemory MCP — keyless machine + translation-memory translation.",
   "type": "module",
   "main": "lib/index.js",
@@ -27,7 +27,7 @@
     "mode": "gateway",
     "slug": "mymemory",
     "gatewaySlug": "mymemory",
-    "sourceHash": "v1-41bba49fb44e7ba8ce4b7c7b5b691671832fef2e874a2a273a24d69d3b5b05df",
-    "sourceCommit": "f47d581679e1e887373df51ba623f891fbe4c464"
+    "sourceHash": "v1-2b04904a45c7eca854f784e996f57e203beddd3fdcfee6b97a39af7de2b5e895",
+    "sourceCommit": "748d0e6962c0a171a91cad30f4106ffd22aed2b7"
   }
 }

@@ -4,7 +4,7 @@ Keyless machine + translation-memory translation between languages — the one
 translation pack in the catalog that needs no API key, no self-hosted
 instance, and no registration of any kind.
 
-Part of [Pipeworx](https://pipeworx.io) — an MCP gateway connecting AI agents to 1857+ live data sources. This is an independent, unofficial integration — not affiliated with, endorsed by, or published by the upstream provider.
+Part of [Pipeworx](https://pipeworx.io) — an MCP gateway connecting AI agents to 1863+ live data sources. This is an independent, unofficial integration — not affiliated with, endorsed by, or published by the upstream provider.
 
 ## Tools
 
@@ -55,6 +55,10 @@ in `workers/gateway/src/retry-policy.ts`) falls over to it automatically when
 `shared/src/field-aliases.ts` are what let the retry hand this pack the same
 arguments the failed call received.
 
+## Egress
+
+MyMemory's anonymous daily quota is counted per egress IP, and the shared Cloudflare range the gateway runs from is often already exhausted (HTTP 429). The pack tries the direct call first and, on a non-ok answer, retries once through Pipeworx's non-Cloudflare relay. If both are throttled, the tool returns an explicit `rate_limit` refusal rather than an error.
+
 ## Quick Start
 
 Add to your MCP client (Claude Desktop, Cursor, Windsurf, etc.):
@@ -99,7 +103,7 @@ directly, instead of just this one's:
 }
 ```
 
-Both URLs reach the same gateway and the same 1857+ data sources. The
+Both URLs reach the same gateway and the same 1863+ data sources. The
 only difference is which pack's tools are listed **directly**; `ask_pipeworx`
 reaches all of them from either one.
 
